@@ -16,6 +16,7 @@ const DashboardPage=()=>{
     <>
       this is the main dashboard page
       <Button colorScheme="red" onClick={logOut}>logout</Button>
+      {user?.displayName}
     </>
   )
 }
