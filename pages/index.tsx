@@ -7,7 +7,7 @@ import { writeUserData } from "../firebase/dboperations";
 const DashboardPage=()=>{
   const {toggleColorMode} = useColorMode()
   const buttoncolor= useColorModeValue("blackAlpha","blue")
-  const formbackgroundcolor = useColorModeValue("gray.10","gray.700")
+  const formbackgroundcolor = useColorModeValue("WhiteAlpha 900","gray.700")
   useEffect(()=>{
     console.log("this runs on mount")
     // let userId = 789;
@@ -21,7 +21,6 @@ const DashboardPage=()=>{
     <>
     <Button colorScheme={buttoncolor} onClick={toggleColorMode}>Change color mode</Button>
       <UserLogin background={formbackgroundcolor}/>
-      <GoogleLogin/>
     </>
   )
 }
