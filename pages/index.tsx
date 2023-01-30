@@ -1,5 +1,6 @@
 import { Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { useEffect } from "react";
+import GoogleLogin from "../components/googlelogin";
 import UserLogin from "../components/userlogin";
 import { writeUserData } from "../firebase/dboperations";
 
@@ -20,6 +21,7 @@ const DashboardPage=()=>{
     <>
     <Button colorScheme={buttoncolor} onClick={toggleColorMode}>Change color mode</Button>
       <UserLogin background={formbackgroundcolor}/>
+      <GoogleLogin/>
     </>
   )
 }
