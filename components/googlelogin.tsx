@@ -13,7 +13,7 @@ function GoogleLogin({background}:any){
         signInWithPopup(auth, provider)
         .then((result) => {
             const user = result.user;
-            router.push("/")
+            router.push("/loginpage")// dashboard
          }).catch((error) => {
             console.log("login vayena")
         });

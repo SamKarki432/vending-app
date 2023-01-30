@@ -1,23 +1,27 @@
 import { Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
-import GoogleLogin from "../components/googlelogin";
 import UserLogin from "../components/userlogin";
-import { writeUserData } from "../firebase/dboperations";
 import useFirebaseAuth from "../firebase/useAuth";
+;
 
-const DashboardPage=()=>{
-   const {user, loading, logOut}= useFirebaseAuth();
-   
-   if(loading){
-    return "loading please wait"
-   }
+const LoginPage=()=>{
+  const{user,loading,logOut}=useFirebaseAuth();
+  const {toggleColorMode} = useColorMode();
+  const buttoncolor= useColorModeValue("blackAlpha","blue");
+  const formbackgroundcolor = useColorModeValue("WhiteAlpha 900","gray.700");
+  const router= useRouter()
 
+  if(user){
+    router.push("/loginpage")
+  }
+ 
   return (
     <>
-      this is the main dashboard page
-      <Button colorScheme="red" onClick={logOut}>logout</Button>
+    <Button colorScheme={buttoncolor} onClick={toggleColorMode}>Change color mode</Button>
+      <UserLogin background={formbackgroundcolor}/>
     </>
   )
 }
 
-export default DashboardPage;
+export default LoginPage;

@@ -14,7 +14,7 @@ function useFirebaseAuth(){
     const handlelogout=()=>{
         signOut(auth).then((res)=>{
             console.log("signed-out")
-            router.push("/loginpage")
+            router.push("/")
         })
     }
 
@@ -25,7 +25,7 @@ function useFirebaseAuth(){
                 console.log("user is not logged in")
                 setauthUser(null)
                 setloading(false)
-                router.push("/loginpage")
+                router.push("/")
             }
             else{
                 console.log("currently logged in")
