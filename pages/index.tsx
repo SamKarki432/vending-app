@@ -3,24 +3,19 @@ import { useEffect } from "react";
 import GoogleLogin from "../components/googlelogin";
 import UserLogin from "../components/userlogin";
 import { writeUserData } from "../firebase/dboperations";
+import useFirebaseAuth from "../firebase/useAuth";
 
 const DashboardPage=()=>{
-  const {toggleColorMode} = useColorMode()
-  const buttoncolor= useColorModeValue("blackAlpha","blue")
-  const formbackgroundcolor = useColorModeValue("WhiteAlpha 900","gray.700")
-  useEffect(()=>{
-    console.log("this runs on mount")
-    // let userId = 789;
-    // let name = "John Doe";
-    // let email = "johndoe@example.com";
-    // let imageUrl = "https://example.com/image.jpg";
-    // writeUserData(userId, name, email, imageUrl);
-  },[])
- 
+   const {user, loading, logOut}= useFirebaseAuth();
+   
+   if(loading){
+    return "loading please wait"
+   }
+
   return (
     <>
-    <Button colorScheme={buttoncolor} onClick={toggleColorMode}>Change color mode</Button>
-      <UserLogin background={formbackgroundcolor}/>
+      this is the main dashboard page
+      <Button colorScheme="red" onClick={logOut}>logout</Button>
     </>
   )
 }
