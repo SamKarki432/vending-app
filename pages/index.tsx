@@ -1,7 +1,12 @@
+import { Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { useEffect } from "react";
+import UserLogin from "../components/userlogin";
 import { writeUserData } from "../firebase/dboperations";
 
 const DashboardPage=()=>{
+  const {toggleColorMode} = useColorMode()
+  const buttoncolor= useColorModeValue("blackAlpha","blue")
+  const formbackgroundcolor = useColorModeValue("gray.10","gray.700")
   useEffect(()=>{
     console.log("this runs on mount")
     // let userId = 789;
@@ -13,8 +18,8 @@ const DashboardPage=()=>{
  
   return (
     <>
-      <p>this is user dashboard page</p>
-      <p> user details are shown here</p>
+    <Button colorScheme={buttoncolor} onClick={toggleColorMode}>Change color mode</Button>
+      <UserLogin background={formbackgroundcolor}/>
     </>
   )
 }
