@@ -8,7 +8,7 @@ const LoginPage=()=>{
   const {user, loading, logOut}= useFirebaseAuth();
   const {toggleColorMode} = useColorMode()
   const buttoncolor= useColorModeValue("blackAlpha","blue")
-  const formbackgroundcolor = useColorModeValue("WhiteAlpha 900","gray.700")
+  const formbackgroundcolor = useColorModeValue("WhiteAlpha 900","WhiteAlpha 900")
   const router= useRouter()
  
  if(user){

@@ -6,7 +6,7 @@ function UserLogin({background}:any){
     return (
         <>
             <Flex height="80vh" alignItems="center" justifyContent="center">
-                <Flex direction="column" background={background} p={12} rounded={6}>
+                <Flex direction="column" background={background} p={12} rounded={8}>
                     <Heading mb={6} textAlign="center">SIGN-IN</Heading>
                     <FormControl mb={3}>
                         <FormLabel htmlFor="email">Email</FormLabel>
@@ -16,7 +16,7 @@ function UserLogin({background}:any){
                         <FormLabel htmlFor="password">Password</FormLabel>
                         <Input id="password" type="password" />
                     </FormControl>
-                    <Button colorScheme="green" mb={5}>Log-in</Button>
+                    <Button colorScheme="purple" mb={5}>Log-in</Button>
                     <HStack mb={5}>
                         <Divider />
                             <Text fontSize="sm" whiteSpace="nowrap" color="muted">
