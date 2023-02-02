@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import {
   Box,
   Flex,
@@ -38,6 +38,7 @@ export default function Nav() {
    const {user, loading, logOut}= useFirebaseAuth()
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
@@ -61,7 +62,7 @@ export default function Nav() {
                   minW={0}>
                   <Avatar
                     size={'sm'}
-                    src={'https://avatars.dicebear.com/api/male/username.svg'}
+                    src={user?.photoURL?String(user?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg' }
                   />
                 </MenuButton>
                 <MenuList alignItems={'center'}>
@@ -69,16 +70,15 @@ export default function Nav() {
                   <Center>
                     <Avatar
                       size={'2xl'}
-                      src={'https://avatars.dicebear.com/api/male/username.svg'}
+                      src={user?.photoURL?String(user?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg' }
                     />
                   </Center>
                   <br />
                   <Center>
-                    <p>Username</p>
+                    <p>{user?.displayName}</p>
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
                   <MenuItem>Account Settings</MenuItem>
                   <MenuItem onClick={logOut}>Logout</MenuItem>
                 </MenuList>
