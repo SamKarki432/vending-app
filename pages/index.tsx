@@ -1,8 +1,9 @@
-import { Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Button, Stack, useColorMode, useColorModeValue ,Flex, Container} from "@chakra-ui/react";
 import { useEffect } from "react";
 import GoogleLogin from "../components/googlelogin";
 import NavBar from "../components/navbar";
 import WithSubnavigation from "../components/navbar";
+import UserInfoCard from "../components/userinfo components/userinfocard";
 import UserLogin from "../components/userlogin";
 import { writeUserData } from "../firebase/dboperations";
 import useFirebaseAuth from "../firebase/useAuth";
@@ -18,9 +19,9 @@ const DashboardPage=()=>{
     <>
       {/* <WithSubnavigation/> */}
       <NavBar/>
-      this is the main dashboard page
-      {user?.displayName}
-    </>
+        
+          <UserInfoCard userinfo={user}/>
+     </>
   )
 }
 
