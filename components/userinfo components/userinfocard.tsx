@@ -56,7 +56,6 @@ import {
             </Text>
   
             <Stack
-              width={'100%'}
               mt={'2rem'}
               direction={'row'}
               padding={2}
