@@ -15,13 +15,13 @@ import {
     return (
       <Center py={6}>
         <Stack
-          borderWidth="1px"
-          borderRadius="lg"
+          // borderWidth="1px"
+          // borderRadius="lg"
           w={{ sm: '100%', md: '100%', lg:'75%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           bg={useColorModeValue('white', 'gray.900')}
-          boxShadow={'2xl'}
+          // boxShadow={'2xl'}
           padding={4}>
           <Flex flex={1} 
           justifyContent="center"
