@@ -16,7 +16,7 @@ function UserLogin({background}:any){
                         <FormLabel htmlFor="password">Password</FormLabel>
                         <Input id="password" type="password" />
                     </FormControl>
-                    <Button colorScheme="purple" mb={5}>Log-in</Button>
+                    <Button colorScheme="teal" mb={5}>Log-in</Button>
                     <HStack mb={5}>
                         <Divider />
                             <Text fontSize="sm" whiteSpace="nowrap" color="muted">

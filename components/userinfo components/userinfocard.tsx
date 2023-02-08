@@ -17,16 +17,18 @@ import {
         <Stack
           borderWidth="1px"
           borderRadius="lg"
-          w={{ sm: '100%', md: '1080px' }}
-          height={{ sm: '600px', md: '25rem' }}
+          w={{ sm: '100%', md: '100%', lg:'75%' }}
+          height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           bg={useColorModeValue('white', 'gray.900')}
           boxShadow={'2xl'}
           padding={4}>
-          <Flex flex={1} >
+          <Flex flex={1} 
+          justifyContent="center"
+          >
             <Image
               borderRadius='full'
-              boxSize='350px'
+              boxSize={{ sm: '500px', md: '300px' }}
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />
           </Flex>
@@ -35,8 +37,9 @@ import {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            p={1}
-            pt={2}>
+            // p={1}
+            // pt={2}
+            >
             <Heading fontSize={'2xl'} fontFamily={'body'}>
               {userinfo?.displayName}
             </Heading>
@@ -64,7 +67,7 @@ import {
                 flex={1}
                 fontSize={'sm'}
                 rounded={'full'}
-                bg={'blue.400'}
+                bg={'teal.400'}
                 color={'white'}
                 boxShadow={
                   '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
