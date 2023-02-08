@@ -37,8 +37,8 @@ import {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            // p={1}
-            // pt={2}
+            p={1}
+            pt={2}
             >
             <Heading fontSize={'2xl'} fontFamily={'body'}>
               {userinfo?.displayName}

@@ -23,9 +23,7 @@ const DashboardPage=()=>{
       <NavBar/>
       <Stack marginLeft={'1rem'} marginRight={'1rem'}>
           <UserInfoCard userinfo={user}/>
-          <br/>
           <BalanaceLoad/>
-          <br/>
           <HistoryTable userinfo={user} />
       </Stack>
      </>
