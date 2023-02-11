@@ -17,7 +17,9 @@ export default function HistoryTable({userinfo}:any){
     return(
         <>
                 <Center>
-                <TableContainer  w={{ sm: '100%', md: '90%', lg:'90%' }}>
+                <TableContainer  w={{ sm: '100%', md: '90%', lg:'90%' }}
+                 borderRadius="lg"
+                 boxShadow={'2xl'}>
                     <Table variant='striped' colorScheme='teal'>
                         <TableCaption>{userinfo?.displayName?String(userinfo?.displayName):'Falano'} Purchase history</TableCaption>
                     <Thead>

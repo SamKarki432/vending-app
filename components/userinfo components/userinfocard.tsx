@@ -22,12 +22,14 @@ import {
           direction={{ base: 'column', md: 'row' }}
           bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
+          borderRadius="lg"
+          boxShadow={'2xl'}
           padding={4}>
           <Flex flex={1} 
           justifyContent="center"
           >
             <Image
-              borderRadius='full'
+              // borderRadius='full'
               boxSize={{ sm: '500px', md: '300px' }}
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />

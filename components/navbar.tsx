@@ -41,10 +41,10 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.300', 'gray.900')} px={4} as="header">
+      <Box bg={useColorModeValue('gray.700', 'gray.900')} px={4} as="header">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
           <Box>
-            <Heading>Dashboard</Heading>
+            <Heading color={useColorModeValue('white', 'white')}>Dashboard</Heading>
           </Box>
 
           <Flex alignItems={'center'}>

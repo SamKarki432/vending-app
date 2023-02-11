@@ -5,19 +5,22 @@ import { Card, CardBody, CardFooter, CardHeader, Heading , Text
 export default function BalanaceLoad(){
     return(
         <>
-        <Center py={6}>
-            <Stack direction={['column', 'row']} spacing='50px'>
+        <Center>
+            <Stack direction={['column', 'row']} spacing='50px' align='stretch'>
                 <Box>
                 <Card align='center'
                  bg={useColorModeValue('white', 'gray.900')}
                   borderRadius="lg"
                   boxShadow={'2xl'}
+                  _hover={{ bg: "teal.600" }}
+                  _focus={{ boxShadow: "outline" }}
+                  maxW='md'
                     >
                     <CardHeader>
-                         <Heading size='md'> Balance </Heading>
+                         <Heading size='md'> Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                        <Text>View a summary of all your customers over the last montheeeee</Text>
+                        <Text fontSize='3xl' > Nrs. 1500 </Text>
                     </CardBody>
                     <CardFooter>
                          <Button colorScheme='teal'
@@ -53,7 +56,7 @@ export default function BalanaceLoad(){
                          <Heading size='md'>Load Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                        <Text marginRight={'5rem'}>View a summary of all your customers over the last month.</Text>
+                        <Text fontSize='3xl'>Load balance </Text>
                     </CardBody>
                     <CardFooter>
                          <Button colorScheme='teal'
