@@ -12,8 +12,6 @@ export default function BalanaceLoad(){
                  bg={useColorModeValue('white', 'gray.900')}
                   borderRadius="lg"
                   boxShadow={'2xl'}
-                  _hover={{ bg: "teal.600" }}
-                  _focus={{ boxShadow: "outline" }}
                   maxW='md'
                     >
                     <CardHeader>
