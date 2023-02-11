@@ -5,8 +5,8 @@ import { Card, CardBody, CardFooter, CardHeader, Heading , Text
 export default function BalanaceLoad(){
     return(
         <>
-        <Center>
-            <Stack direction={['column', 'row']} spacing='50px' align='stretch'>
+        <Center py={6}>
+            <Stack direction={['column', 'row']} spacing='50px' >
                 <Box>
                 <Card align='center'
                  bg={useColorModeValue('white', 'gray.900')}

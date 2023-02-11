@@ -1,20 +1,26 @@
 import { Button, Stack, useColorMode, useColorModeValue ,Flex, Container,Text, Center, Box} from "@chakra-ui/react";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import VendingFooter from "../components/footer";
 import NavBar from "../components/navbar";
 import BalanaceLoad from "../components/userinfo components/balanceload";
 import HistoryTable from "../components/userinfo components/historytable";
 import UserInfoCard from "../components/userinfo components/userinfocard";
-import { writeUserData } from "../firebase/dboperations";
+import { readData, readUserdata, writeUserData } from "../firebase/dboperations";
 import useFirebaseAuth from "../firebase/useAuth";
 
 const DashboardPage=()=>{
-   const {user, loading, logOut}= useFirebaseAuth();
+  const {user, loading, logOut}= useFirebaseAuth();
+  const [userdata, setUserdata]=useState()
    
    if(loading){
     return "loading please wait"
    }
 
+    readData("users/"+user?.uid).then((data)=>{
+      setUserdata(data)
+     }
+     )
+     
   return (
     <>
       <NavBar/>
