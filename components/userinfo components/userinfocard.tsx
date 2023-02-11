@@ -20,7 +20,7 @@ import {
           w={{ sm: '100%', md: '100%', lg:'75%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
-          bg={useColorModeValue('white', 'gray.900')}
+          // bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           borderRadius="lg"
           boxShadow={'2xl'}
@@ -29,7 +29,8 @@ import {
           justifyContent="center"
           >
             <Image
-              // borderRadius='full'
+              borderRadius='full'
+              alt='image'
               boxSize={{ sm: '500px', md: '300px' }}
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />
@@ -51,7 +52,7 @@ import {
 
             <Text
             //   textAlign={'center'}
-              color={useColorModeValue('gray.700', 'gray.400')}
+              // color={useColorModeValue('gray.700', 'gray.400')}
               px={3}>
               
               {userinfo?.metadata.creationTime}
