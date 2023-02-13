@@ -20,11 +20,12 @@ import {
           w={{ sm: '100%', md: '100%', lg:'75%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
-          // bg={useColorModeValue('white', 'gray.900')}
+          bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           borderRadius="lg"
-          boxShadow={'2xl'}
+          boxShadow={'xl'}
           padding={4}>
+
           <Flex flex={1} 
           justifyContent="center"
           >
@@ -69,7 +70,7 @@ import {
                 flex={1}
                 fontSize={'sm'}
                 rounded={'full'}
-                bg={'teal.400'}
+                bg={'#4681f4'}
                 color={'white'}
                 boxShadow={
                   '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'

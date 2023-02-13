@@ -5,8 +5,10 @@ import { Card, CardBody, CardFooter, CardHeader, Heading , Text
 export default function BalanaceLoad(){
     return(
         <>
-        <Center>
-            <Stack direction={['column', 'row']} spacing='50px' align='stretch'>
+            <Stack direction={['column', 'row']} 
+            // spacing='50px' 
+            align='stretch' 
+            justifyContent={'space-around'}>
                 <Box>
                 <Card align='center'
                  bg={useColorModeValue('white', 'gray.900')}
@@ -17,17 +19,17 @@ export default function BalanaceLoad(){
                   maxW='md'
                     >
                     <CardHeader>
-                         <Heading size='md'> Balance</Heading>
+                         <Heading size='md'> Balance.eeeeeeeeeeeeeeeeeeeee</Heading>
                     </CardHeader>
                     <CardBody>
                         <Text fontSize='3xl' > Nrs. 1500 </Text>
                     </CardBody>
                     <CardFooter>
-                         <Button colorScheme='teal'
+                         <Button colorScheme='#4681f4'
                          flex={1}
                          fontSize={'sm'}
                          rounded={'full'}
-                         bg={'teal.400'}
+                         bg={'#4681f4'}
                          color={'white'}
                          boxShadow={
                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -53,17 +55,17 @@ export default function BalanaceLoad(){
                   boxShadow={'2xl'}
                  >
                     <CardHeader>
-                         <Heading size='md'>Load Balance</Heading>
+                         <Heading size='md'>Load Balanceeeeeeeeeeee</Heading>
                     </CardHeader>
                     <CardBody>
                         <Text fontSize='3xl'>Load balance </Text>
                     </CardBody>
                     <CardFooter>
-                         <Button colorScheme='teal'
+                         <Button colorScheme='#4681f4'
                          flex={1}
                          fontSize={'sm'}
                          rounded={'full'}
-                         bg={'teal.400'}
+                         bg={'#4681f4'}
                          color={'white'}
                          boxShadow={
                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -81,7 +83,6 @@ export default function BalanaceLoad(){
                  </Card> 
                 </Box>
             </Stack>
-      </Center>
         </>
     )
 }

@@ -12,16 +12,32 @@ import {
     Text,
     Stack
   } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 
 export default function HistoryTable({userinfo}:any){
+    type Transaction = {
+        items_purchased: string[];
+        price: number;
+        transaction_date: string;
+        transaction_id: string;
+        vending_location: string;
+      };
+      
+//       const [transactions, setTransactions]= useState<Transaction[]>([]);
+// useEffect(()=>{
+//         setTransactions(userinfo.transactions)
+// })
     return(
         <>
+       
                 <Center>
-                <TableContainer  w={{ sm: '100%', md: '90%', lg:'90%' }}
+                <TableContainer  w={{ sm: '100%', md: '100%', lg:'90%' }}
                  borderRadius="lg"
-                 boxShadow={'2xl'}>
-                    <Table variant='striped' colorScheme='teal'>
-                        <TableCaption>{userinfo?.displayName?String(userinfo?.displayName):'Falano'} Purchase history</TableCaption>
+                 boxShadow={'2xl'}
+                >
+                    <Table colorScheme='#4681f4'>
+                        <TableCaption>{userinfo?.user_name?String(userinfo?.user_name):'Falano'} Purchase history</TableCaption>
+                  
                     <Thead>
                          <Tr>
                             <Th>Date</Th>
@@ -30,20 +46,22 @@ export default function HistoryTable({userinfo}:any){
                             <Th>Total price</Th>
                         </Tr>
                     </Thead>
-                    <Tbody>
-                        <Tr>
-                            <Td>insert date</Td>
-                            <Td>Dhobighat</Td>
-                            <Td>milk,water</Td>
-                            <Td isNumeric>400</Td>
-                        </Tr>
-
-                        <Tr>
-                            <Td>insert date</Td>
-                            <Td>Kalimati</Td>
-                            <Td>Chocolate</Td>
-                            <Td isNumeric>100</Td>
-                        </Tr>
+                    <Tbody  alignContent={'center'}
+                    justifyContent={'center'}>
+                    {userinfo && userinfo.transactions ? (
+                            userinfo.transactions.map((transaction:Transaction) => (
+                                <tr key={transaction.transaction_id}>
+                                <td>{(transaction.transaction_date).toLocaleString()}</td>
+                                <td>{transaction.vending_location}</td>
+                                <td>{transaction.items_purchased.join(",")}</td>
+                                <td>{transaction.price}</td>
+                                </tr>
+                            ))
+                            ) : (
+                            <tr>
+                                <td colSpan={4}>No transactions found</td>
+                            </tr>
+                            )}
                     </Tbody>
                 </Table>
             </TableContainer>
