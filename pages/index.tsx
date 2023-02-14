@@ -29,7 +29,7 @@ const DashboardPage=()=>{
       <NavBar/>
       <Stack marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'}>
         
-          <UserInfoCard userinfo={user}/>
+          <UserInfoCard userinfo={user} userdatadb={userdata}/>
           <BalanaceLoad/>
           <br/><br/>
           <Center>

@@ -18,9 +18,10 @@ import {
     ModalCloseButton,
     useDisclosure,Input,FormLabel,FormControl
   } from '@chakra-ui/react';
+import { updateUser } from '../../firebase/dboperations';
 import EditProfile from './editprofile';
   
-  export default function socialProfileWithImageHorizontal({userinfo}:any) {
+  export default function socialProfileWithImageHorizontal({userinfo,userdatadb}:any) {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>){
@@ -30,7 +31,17 @@ import EditProfile from './editprofile';
       const phoneNum = form.elements.namedItem('phone_number') as HTMLInputElement;
       const address = form.elements.namedItem('Address') as HTMLInputElement;
       
-      console.log(Name.value)
+    // console.log({
+    //   user_name: Name.value,
+    //   phoneNumber: phoneNum.value,
+    //   address: address.value,
+    //  })
+
+     updateUser(userinfo.uid, {
+      user_name: Name.value,
+      phoneNumber: phoneNum.value,
+      address: address.value,
+     })
       onClose()
   }
     
@@ -115,29 +126,33 @@ import EditProfile from './editprofile';
                       <form onSubmit={handleSubmit}>
                             <FormControl mb={3}>
                                     <FormLabel htmlFor="user name">User Name</FormLabel>
-                                    <Input id="user_name" type="text" border={'solid'} />
+                                    <Input id="user_name" type="text" border={'solid'} 
+                                    defaultValue={userdatadb?.user_name?userdatadb?.user_name:"USER"}
+                                    />
                             </FormControl>
 
                             <FormControl mb={3}>
                                     <FormLabel htmlFor="phone number">Phone Number</FormLabel>
-                                    <Input id="phone_number" type="tel" border={'solid'} />
+                                    <Input id="phone_number" type="tel" border={'solid'}
+                                    defaultValue={userdatadb?.phoneNumber?userdatadb?.phoneNumber:"enter phone number"}                                    
+                                    />
                             </FormControl>
 
                             <FormControl mb={3}>
                                     <FormLabel htmlFor="Address">Address</FormLabel>
-                                    <Input id="Address" type="text" border={'solid'} />
+                                    <Input id="Address" type="text" border={'solid'} 
+                                     defaultValue={userdatadb?.address? userdatadb?.address:"enter your address"}
+                                    />
                             </FormControl>
-                    
-                           <Button colorScheme="blue" mb={5} type='submit'>Edit</Button>
+
+                            <ModalFooter>      
+                                  <Button colorScheme='red' mr={3} onClick={onClose}>
+                                          Close
+                                  </Button>
+                                  <Button variant='ghost'  type='submit'>Edit</Button>
+                           </ModalFooter>                    
                        </form>
                       </ModalBody>
-
-                      <ModalFooter>
-                        <Button colorScheme='red' mr={3} onClick={onClose}>
-                          Close
-                        </Button>
-                        {/* <Button variant='ghost' colorScheme='blue'>Edit Profile</Button> */}
-                      </ModalFooter>
                     </ModalContent>
              </Modal>
             </Stack>
