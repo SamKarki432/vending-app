@@ -9,9 +9,31 @@ import {
     Stack,
     Text,
     useColorModeValue,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,Input,FormLabel,FormControl
   } from '@chakra-ui/react';
+import EditProfile from './editprofile';
   
   export default function socialProfileWithImageHorizontal({userinfo}:any) {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+      const form = event.currentTarget;
+      event.preventDefault();
+      const Name = form.elements.namedItem('user_name') as HTMLInputElement;
+      const phoneNum = form.elements.namedItem('phone_number') as HTMLInputElement;
+      const address = form.elements.namedItem('Address') as HTMLInputElement;
+      
+      console.log(Name.value)
+      onClose()
+  }
+    
     return (
       <Center py={6}>
         <Stack
@@ -70,6 +92,7 @@ import {
                 flex={1}
                 fontSize={'sm'}
                 rounded={'full'}
+                onClick={onOpen}
                 bg={'#4681f4'}
                 color={'white'}
                 boxShadow={
@@ -83,6 +106,40 @@ import {
                 }}>
                 Edit profile
               </Button>
+              <Modal isOpen={isOpen} onClose={onClose} isCentered>
+                    <ModalOverlay />
+                    <ModalContent>
+                      <ModalHeader>Profile</ModalHeader>
+                      <ModalCloseButton />
+                      <ModalBody>
+                      <form onSubmit={handleSubmit}>
+                            <FormControl mb={3}>
+                                    <FormLabel htmlFor="user name">User Name</FormLabel>
+                                    <Input id="user_name" type="text" border={'solid'} />
+                            </FormControl>
+
+                            <FormControl mb={3}>
+                                    <FormLabel htmlFor="phone number">Phone Number</FormLabel>
+                                    <Input id="phone_number" type="tel" border={'solid'} />
+                            </FormControl>
+
+                            <FormControl mb={3}>
+                                    <FormLabel htmlFor="Address">Address</FormLabel>
+                                    <Input id="Address" type="text" border={'solid'} />
+                            </FormControl>
+                    
+                           <Button colorScheme="blue" mb={5} type='submit'>Edit</Button>
+                       </form>
+                      </ModalBody>
+
+                      <ModalFooter>
+                        <Button colorScheme='red' mr={3} onClick={onClose}>
+                          Close
+                        </Button>
+                        {/* <Button variant='ghost' colorScheme='blue'>Edit Profile</Button> */}
+                      </ModalFooter>
+                    </ModalContent>
+             </Modal>
             </Stack>
           </Stack>
         </Stack>
