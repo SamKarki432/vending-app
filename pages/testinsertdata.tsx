@@ -31,6 +31,20 @@ export default function Testdata(){
                 items_purchased:["milk"],
                 price: 100,
                 transaction_date: (new Date()).toLocaleString()
+            },
+            {
+                vending_location:"Dhobighat",
+                transaction_id: user?.uid+ "Dhobighat"+"1",
+                items_purchased:["kitkat, Kurkure, Waiwai"],
+                price: 300,
+                transaction_date: (new Date()).toLocaleString()
+            },
+            {
+                vending_location:"Dhobighat",
+                transaction_id: user?.uid+ "Dhobighat"+"2",
+                items_purchased:["water"],
+                price: 50,
+                transaction_date: (new Date()).toLocaleString()
             }
         ]
     }
