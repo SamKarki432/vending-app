@@ -58,7 +58,7 @@ export default function BalanaceLoad({userdatadb}:any){
                          <Heading size='md'>Load Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                        <Text fontSize='xl'>Load balance into your account through khalti</Text>
+                        <Text fontSize='xl'>Load balance into your account through Khalti</Text>
                     </CardBody>
                     <CardFooter>
                          <Button colorScheme='#4681f4'

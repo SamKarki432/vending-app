@@ -34,7 +34,7 @@ export default function HistoryTable({userinfo}:any){
                 <TableContainer  w={{ sm: '100%', md: '100%', lg:'90%' }}
                  borderRadius="lg"
                  boxShadow={'2xl'}
-                 sx={{ borderRadius: "5%" }}
+                 sx={{ borderRadius: "7%" }}
                 >
                     <Table  variant='striped' colorScheme='blue'>
                         <TableCaption>{userinfo?.user_name?String(userinfo?.user_name):'Falano'} Purchase history</TableCaption>

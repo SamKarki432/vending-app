@@ -53,7 +53,7 @@ export default function Nav() {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
-              <Menu>
+              {/* <Menu>
                 <MenuButton
                   as={Button}
                   rounded={'full'}
@@ -82,7 +82,8 @@ export default function Nav() {
                   <MenuItem>Account Settings</MenuItem>
                   <MenuItem onClick={logOut}>Logout</MenuItem>
                 </MenuList>
-              </Menu>
+              </Menu> */}
+              <Button onClick={logOut} colorScheme={'red'}>Log Out</Button>
             </Stack>
           </Flex>
         </Flex>
