@@ -15,7 +15,7 @@ export default function BalanaceLoad({userdatadb}:any){
                   borderRadius="lg"
                   boxShadow={'2xl'}
                   maxW='md'
-                  sx={{ borderRadius: "20%" }}
+                  sx={{ borderRadius: "15%" }}
                     >
                     <CardHeader>
                          <Heading size='md'> Balance</Heading>
@@ -52,7 +52,7 @@ export default function BalanaceLoad({userdatadb}:any){
                  bg={useColorModeValue('white', 'gray.900')}
                  borderRadius="lg"
                   boxShadow={'2xl'}
-                  sx={{ borderRadius: "20%" }}
+                  sx={{ borderRadius: "15%" }}
                  >
                     <CardHeader>
                          <Heading size='md'>Load Balance</Heading>
