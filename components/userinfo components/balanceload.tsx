@@ -2,7 +2,7 @@ import { Card, CardBody, CardFooter, CardHeader, Heading , Text
 ,Button, SimpleGrid, Center, Stack, Flex, useColorModeValue,Box} from "@chakra-ui/react";
 
 
-export default function BalanaceLoad(){
+export default function BalanaceLoad({userdatadb}:any){
     return(
         <>
             <Stack direction={['column', 'row']} 
@@ -14,15 +14,14 @@ export default function BalanaceLoad(){
                  bg={useColorModeValue('white', 'gray.900')}
                   borderRadius="lg"
                   boxShadow={'2xl'}
-                  _hover={{ bg: "teal.600" }}
-                  _focus={{ boxShadow: "outline" }}
                   maxW='md'
+                  sx={{ borderRadius: "20%" }}
                     >
                     <CardHeader>
-                         <Heading size='md'> Balance.eeeeeeeeeeeeeeeeeeeee</Heading>
+                         <Heading size='md'> Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                        <Text fontSize='3xl' > Nrs. 1500 </Text>
+                        <Text fontSize='xl' > Nrs.{userdatadb?.balance?userdatadb?.balance:"can't load balance"}</Text>
                     </CardBody>
                     <CardFooter>
                          <Button colorScheme='#4681f4'
@@ -53,12 +52,13 @@ export default function BalanaceLoad(){
                  bg={useColorModeValue('white', 'gray.900')}
                  borderRadius="lg"
                   boxShadow={'2xl'}
+                  sx={{ borderRadius: "20%" }}
                  >
                     <CardHeader>
-                         <Heading size='md'>Load Balanceeeeeeeeeeee</Heading>
+                         <Heading size='md'>Load Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                        <Text fontSize='3xl'>Load balance </Text>
+                        <Text fontSize='xl'>Load balance into your account through khalti</Text>
                     </CardBody>
                     <CardFooter>
                          <Button colorScheme='#4681f4'
@@ -77,7 +77,7 @@ export default function BalanaceLoad(){
                            bg: 'blue.500',
                          }}
                          >
-                            View here
+                            Load
                         </Button>
                     </CardFooter>
                  </Card> 

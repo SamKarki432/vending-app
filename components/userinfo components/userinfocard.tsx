@@ -50,9 +50,10 @@ import EditProfile from './editprofile';
         <Stack
           // borderWidth="1px"
           // borderRadius="lg"
-          w={{ sm: '100%', md: '100%', lg:'75%' }}
+          w={{ sm: '100%', md: '90%', lg:'70%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
+          sx={{ borderRadius: "5%" }}
           bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           borderRadius="lg"
@@ -65,7 +66,7 @@ import EditProfile from './editprofile';
             <Image
               borderRadius='full'
               alt='image'
-              boxSize={{ sm: '500px', md: '300px' }}
+              boxSize={{ sm: '500px', md: '275px' }}
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />
           </Flex>
@@ -89,7 +90,12 @@ import EditProfile from './editprofile';
               // color={useColorModeValue('gray.700', 'gray.400')}
               px={3}>
               
-              {userinfo?.metadata.creationTime}
+              {userdatadb?.address?userdatadb?.address:"No address provided. Enter your address"}
+            </Text>
+
+            <Text px={3}>
+              
+              {userdatadb?.phoneNumber?userdatadb?.phoneNumber:"No Phone Number provided. Enter your phone number"}
             </Text>
   
             <Stack

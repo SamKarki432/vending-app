@@ -30,7 +30,7 @@ const DashboardPage=()=>{
       <Stack marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'}>
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
-          <BalanaceLoad/>
+          <BalanaceLoad userdatadb={userdata}/>
           <br/><br/>
           <Center>
             <Text as={'b'} fontSize='2xl'>Transaction History</Text>
