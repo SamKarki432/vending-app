@@ -108,7 +108,7 @@ import EditProfile from './editprofile';
               <Button
                 flex={1}
                 fontSize={'sm'}
-                rounded={'full'}
+                //rounded={'full'}
                 onClick={onOpen}
                 bg={'#4681f4'}
                 color={'white'}

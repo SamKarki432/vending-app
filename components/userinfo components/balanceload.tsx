@@ -27,7 +27,7 @@ export default function BalanaceLoad({userdatadb}:any){
                          <Button colorScheme='#4681f4'
                          flex={1}
                          fontSize={'sm'}
-                         rounded={'full'}
+                         //rounded={'full'}
                          bg={'#4681f4'}
                          color={'white'}
                          boxShadow={
@@ -64,7 +64,7 @@ export default function BalanaceLoad({userdatadb}:any){
                          <Button colorScheme='#4681f4'
                          flex={1}
                          fontSize={'sm'}
-                         rounded={'full'}
+                         //rounded={'full'}
                          bg={'#4681f4'}
                          color={'white'}
                          boxShadow={
