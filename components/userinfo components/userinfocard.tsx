@@ -21,7 +21,7 @@ import {
 import { updateUser } from '../../firebase/dboperations';
 import EditProfile from './editprofile';
   
-  export default function socialProfileWithImageHorizontal({userinfo,userdatadb}:any) {
+  export default function UserInfoCard({userinfo,userdatadb}:any) {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     function handleSubmit(event: React.FormEvent<HTMLFormElement>){
@@ -54,7 +54,7 @@ import EditProfile from './editprofile';
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
-          bg={useColorModeValue('white', 'gray.900')}
+         // bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           borderRadius="lg"
           boxShadow={'xl'}
