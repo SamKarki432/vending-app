@@ -2,9 +2,23 @@ import React from "react";
 import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import {CategoryScale} from 'chart.js';
+import { CSSProperties } from 'react';
 import { Box, Button, Card, CardBody, CardFooter, CardHeader, Center, Flex, Heading, Stack, useColorModeValue } from "@chakra-ui/react";
 
 Chart.register(CategoryScale);
+
+const styles: { [key: string]: CSSProperties } = {
+    container: {
+      height: '40vh',
+      width: '40vw',
+      position: 'relative' as const,
+    },
+    containerMedia: {
+      height: 'auto',
+      width: 'auto',
+      position: 'static' as const,
+    },
+  };
 
 export default function BarChart(){
   const labels = ["January", "February", "March", "April", "May", "June","July","August","September","October","November","December"];
@@ -12,7 +26,7 @@ export default function BarChart(){
     labels: labels,
     datasets: [
       {
-        label: "Spending per Month",
+        label: "Amount spent",
         backgroundColor: [
             '#002B5B',
             '#2B4865',
@@ -27,7 +41,7 @@ export default function BarChart(){
             '#393053',
             '#18122B'
         ],
-        borderColor: "rgb(255, 99, 132)",
+        // borderColor: "rgb(255, 99, 132)",
         data: [200, 100, 50, 100, 200, 300, 450,300,120,600,200,300],
       },
     ],
@@ -35,12 +49,9 @@ export default function BarChart(){
   return (
     <Center py={6}>
         <Stack
-          // borderWidth="1px"
-          // borderRadius="lg"
-          w={{ sm: '100%', md: '90%', lg:'70%' }}
+          w={{ sm: '50%', md: '90%', lg:'70%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
-          //bg={useColorModeValue('white', 'gray.900')}
           borderRadius="lg"
           boxShadow={'2xl'}
           sx={{ borderRadius: "10%" }}
