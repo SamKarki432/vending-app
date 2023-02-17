@@ -8,6 +8,7 @@ import HistoryTable from "../components/userinfo components/historytable";
 import UserInfoCard from "../components/userinfo components/userinfocard";
 
 import useFirebaseAuth from "../firebase/useAuth";
+import BarChart from "../components/userinfo components/monthlybarchart";
 
 const DashboardPage=()=>{
   type userInfo ={[key:string]:any}
@@ -32,9 +33,7 @@ const DashboardPage=()=>{
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
           <BalanaceLoad userdatadb={userdata}/>
           <br/><br/>
-          <Center>
-            <Text as={'b'} fontSize='2xl'>Transaction History</Text>
-          </Center>
+          <BarChart/>
           <br/> <br/>
           <HistoryTable userinfo={userdata} />
       </Stack>

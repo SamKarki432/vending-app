@@ -10,7 +10,8 @@ import {
     TableContainer,
     Center,
     Text,
-    Stack
+    Stack,
+    Heading
   } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
@@ -37,7 +38,11 @@ export default function HistoryTable({userinfo}:any){
                  sx={{ borderRadius: "7%" }}
                 >
                     <Table  variant='striped' colorScheme='blue'>
-                        <TableCaption>{userinfo?.user_name?String(userinfo?.user_name):'Falano'} Purchase history</TableCaption>
+                        <TableCaption>
+                                <Text fontSize='xl' >
+                                     {userinfo?.user_name?String(userinfo?.user_name):'Falano'} Purchase history
+                                </Text>
+                        </TableCaption>
                   
                     <Thead>
                          <Tr>
