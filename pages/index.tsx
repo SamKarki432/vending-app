@@ -3,6 +3,7 @@ import { useEffect,useState } from "react";
 import VendingFooter from "../components/footer";
 import NavBar from "../components/navbar";
 import BalanaceLoad from "../components/userinfo components/balanceload";
+import BarChart from "../components/userinfo components/barchart";
 import HistoryTable from "../components/userinfo components/historytable";
 import UserInfoCard from "../components/userinfo components/userinfocard";
 import { readData, readUserdata, writeUserData } from "../firebase/dboperations";
@@ -33,7 +34,11 @@ const DashboardPage=()=>{
             <Text as={'b'} fontSize='2xl'>Transaction History</Text>
           </Center>
           <br/> <br/>
+          <BarChart />
+          <br/>
           <HistoryTable userinfo={user} />
+          
+          
       </Stack>
     <VendingFooter/>
      </>
