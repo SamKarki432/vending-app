@@ -33,10 +33,10 @@ export default function HistoryTable({userinfo}:any){
        
                 <Center>
                 <TableContainer  w={{ sm: '100%', md: '100%', lg:'90%' } }
-                 borderWidth="2px"
+                //  borderWidth="2px"
                  borderRadius="lg"
                  boxShadow={'2xl'}
-                 borderColor={'gray.300'}
+                //  borderColor={'gray.300'}
                  sx={{ borderRadius: "7%" }}
                 >
                     <Table  variant='striped' colorScheme='blue'>

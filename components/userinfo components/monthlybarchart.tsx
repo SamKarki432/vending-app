@@ -56,8 +56,9 @@ export default function BarChart(){
           boxShadow={'2xl'}
           sx={{ borderRadius: "10%" }}
           padding={4}
-          borderWidth="2px"
-          borderColor={'gray.300'}>
+          // borderWidth="2px"
+          // borderColor={'gray.300'}
+          >
           <Flex flex={1} 
           justifyContent="center"
           >
