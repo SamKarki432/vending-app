@@ -13,6 +13,8 @@ export default function BalanaceLoad({userdatadb}:any){
                 <Card align='center'
                  bg={useColorModeValue('white', 'gray.900')}
                   borderRadius="lg"
+                  borderWidth="2px"
+                  borderColor={'gray.300'}
                   boxShadow={'2xl'}
                   maxW='md'
                   sx={{ borderRadius: "15%" }}
@@ -49,8 +51,10 @@ export default function BalanaceLoad({userdatadb}:any){
 
                 <Box>
                 <Card align='center'
-                 bg={useColorModeValue('white', 'gray.900')}
+                bg={useColorModeValue('white', 'gray.900')}
                  borderRadius="lg"
+                 borderWidth="2px"
+                 borderColor={'gray.300'}
                   boxShadow={'2xl'}
                   sx={{ borderRadius: "15%" }}
                  >

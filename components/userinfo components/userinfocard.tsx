@@ -48,15 +48,15 @@ import EditProfile from './editprofile';
     return (
       <Center py={6}>
         <Stack
-          // borderWidth="1px"
-          // borderRadius="lg"
+          borderWidth="2px"
+          borderRadius="lg"
           w={{ sm: '100%', md: '90%', lg:'70%' }}
           height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
+          borderColor={'gray.300'}
          // bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
-          borderRadius="lg"
           boxShadow={'xl'}
           padding={4}>
 
@@ -65,6 +65,7 @@ import EditProfile from './editprofile';
           >
             <Image
               borderRadius='full'
+              borderWidth="10px"
               alt='image'
               boxSize={{ sm: '500px', md: '275px' }}
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}

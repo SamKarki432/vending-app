@@ -1,12 +1,14 @@
 import { Button, Flex , Heading, Input,FormLabel,FormControl,Divider,Text,HStack} from "@chakra-ui/react";
-import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
 import GoogleLogin from "./googlelogin";
 
 function UserLogin({background}:any){
     return (
         <>
             <Flex height="80vh" alignItems="center" justifyContent="center">
-                <Flex direction="column" background={background} p={12} rounded={8}>
+                <Flex direction="column" background={background} p={12} rounded={8}
+                 borderRadius="lg"
+                 boxShadow={'xl'}
+                >
                     <Heading mb={6} textAlign="center">SIGN-IN</Heading>
                     <FormControl mb={3}>
                         <FormLabel htmlFor="email">Email</FormLabel>
