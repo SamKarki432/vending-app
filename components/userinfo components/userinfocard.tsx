@@ -19,7 +19,6 @@ import {
     useDisclosure,Input,FormLabel,FormControl
   } from '@chakra-ui/react';
 import { updateUser } from '../../firebase/dboperations';
-import EditProfile from './editprofile';
   
   export default function UserInfoCard({userinfo,userdatadb}:any) {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,7 +47,7 @@ import EditProfile from './editprofile';
     return (
       <Center py={6}>
         <Stack
-      
+    
           borderRadius="lg"
           w={{ sm: '100%', md: '90%', lg:'70%' }}
           height={{ sm: '500px', md: '20rem' }}

@@ -3,7 +3,7 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import {CategoryScale} from 'chart.js';
 import { CSSProperties } from 'react';
-import { Box, Button, Card, CardBody, CardFooter, CardHeader, Center, Flex, Heading, Stack, useColorModeValue } from "@chakra-ui/react";
+import {  Center, Flex,  Stack, useColorModeValue } from "@chakra-ui/react";
 
 Chart.register(CategoryScale);
 
@@ -55,6 +55,7 @@ export default function BarChart(){
           borderRadius="lg"
           boxShadow={'2xl'}
           sx={{ borderRadius: "10%" }}
+          //bg={useColorModeValue('gray.100', 'gray.900')}
           padding={4}
           // borderWidth="2px"
           // borderColor={'gray.300'}
