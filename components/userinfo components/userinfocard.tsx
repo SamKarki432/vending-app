@@ -50,7 +50,7 @@ import { updateUser } from '../../firebase/dboperations';
     
           borderRadius="lg"
           w={{ sm: '100%', md: '90%', lg:'70%' }}
-          height={{ sm: '500px', md: '20rem' }}
+          //height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
           
@@ -62,13 +62,14 @@ import { updateUser } from '../../firebase/dboperations';
           <Flex flex={1} 
           justifyContent="center"
           >
-            <Image
+           <Image
               borderRadius='full'
               borderWidth="10px"
               alt='image'
-              boxSize={{ sm: '500px', md: '275px' }}
+              boxSize={{ sm: '500px', md: '200px', lg: '225px' }} // decrease size in lg screens
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />
+
           </Flex>
           <Stack
             flex={1}

@@ -27,7 +27,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
     rounded={'md'}
     _hover={{
       textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      bg: useColorModeValue('green.300', 'gray.700'),
     }}
     href={'#'}>
     {children}
@@ -41,7 +41,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.300', 'gray.900')} px={4} as="header">
+      <Box bg={useColorModeValue('green.400', 'gray.900')} px={4} as="header">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
           <Box>
             <Heading >Dashboard</Heading>

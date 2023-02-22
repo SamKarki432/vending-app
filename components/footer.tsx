@@ -44,7 +44,7 @@ import {
   export default function VendingFooter() {
     return (
       <Box
-        bg={useColorModeValue('gray.300', 'gray.900')}
+        bg={useColorModeValue('green.100', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
           as={Stack}
