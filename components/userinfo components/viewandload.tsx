@@ -1,4 +1,5 @@
-import { Card, Center, Stack ,CardFooter,useColorModeValue,CardHeader,Heading,CardBody,Text,Button, Box } from "@chakra-ui/react";
+import { Card, Center, Stack ,CardFooter,useColorModeValue,CardHeader,Heading,CardBody,Text,Button, Box 
+} from "@chakra-ui/react";
 
 
 export default function ViewAndLoad({userdatadb}:any){
@@ -20,7 +21,7 @@ export default function ViewAndLoad({userdatadb}:any){
                
                 >
                 <Card align='center'
-                       //bg={useColorModeValue('gray.100', 'gray.900')}
+                       bg={useColorModeValue('white', 'gray.800')}
                         borderRadius="lg"
                         // borderWidth="2px"
                         // borderColor={'gray.300'}
@@ -58,7 +59,7 @@ export default function ViewAndLoad({userdatadb}:any){
                  </Card>    
 
                  <Card align='center'
-                //bg={useColorModeValue('gray.100', 'gray.900')}
+                bg={useColorModeValue('white', 'gray.800')}
                  borderRadius="lg"
                 //  borderWidth="2px"
                 //  borderColor={'gray.300'}

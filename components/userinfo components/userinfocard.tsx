@@ -54,7 +54,7 @@ import { updateUser } from '../../firebase/dboperations';
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
           
-         // bg={useColorModeValue('white', 'gray.900')}
+         //bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           boxShadow={'xl'}
           padding={4}>

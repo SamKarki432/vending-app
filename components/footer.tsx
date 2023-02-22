@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaTwitter, FaYoutube,FaGithub,FaLinkedin } from 'react-icons/fa';
   import { ReactNode } from 'react';
   
   const SocialButton = ({
@@ -66,11 +66,11 @@ import {
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'Linked-in'} href={'#'}>
+              <FaLinkedin />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
+            <SocialButton label={'Github'} href={'#'}>
+              <FaGithub />
             </SocialButton>
           </Stack>
         </Container>

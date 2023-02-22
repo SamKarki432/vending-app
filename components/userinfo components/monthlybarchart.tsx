@@ -48,35 +48,40 @@ export default function BarChart(){
   };
   return (
     <Center py={6}>
-        <Stack
-          w={{ sm: '50%', md: '90%', lg:'70%' }}
-          height={{ sm: '500px', md: '20rem' }}
-          direction={{ base: 'column', md: 'row' }}
-          borderRadius="lg"
-          boxShadow={'2xl'}
-          sx={{ borderRadius: "10%" }}
-          //bg={useColorModeValue('gray.100', 'gray.900')}
-          padding={4}
-          // borderWidth="2px"
-          // borderColor={'gray.300'}
+          <Stack
+            w={{ base: '90%', sm: '80%', md: '80%', lg: '60%' }}
+            height={{ base: '400px', sm: '300px', md: '20rem' }}
+            direction={{ base: 'column', md: 'row' }}
+            borderRadius="lg"
+            boxShadow={'2xl'}
+            sx={{ borderRadius: "10%" }}
+            padding={4}
+            //bg={useColorModeValue('white', 'gray.900')}
           >
-          <Flex flex={1} 
-          justifyContent="center"
-          >
-                 <Bar data={data} 
+            <Flex flex={1} justifyContent="center">
+            <Bar
+                  data={data}
                   options={{
                     plugins: {
                       title: {
                         display: true,
-                        text: "Monthly transactions"
+                        text: "Monthly transactions",
+                        font: {
+                          size: 27 // set the font size of the title to 24
+                        }
                       },
                       legend: {
-                        display: false
-                      }
-                    }
-                  }}/>
-          </Flex>
-        </Stack>
-      </Center>
+                        display: false,
+                      },
+                    },
+                    maintainAspectRatio: false, // Set this to false
+                   
+                  }}
+                />
+
+            </Flex>
+          </Stack>
+    </Center>
+
   );
 };
