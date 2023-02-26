@@ -1,5 +1,6 @@
 import { Card, Center, Stack ,CardFooter,useColorModeValue,CardHeader,Heading,CardBody,Text,Button, Box 
 } from "@chakra-ui/react";
+import checkout from "./checkout";
 
 
 export default function ViewAndLoad({userdatadb}:any){
@@ -71,7 +72,7 @@ export default function ViewAndLoad({userdatadb}:any){
                     <Heading size='md'>Load Balance</Heading>
                     </CardHeader>
                     <CardBody>
-                    <Text fontSize='xl'>Load balance into your account through Khalti</Text>
+                    <Text fontSize='xl'>Load balance into your account</Text>
                     </CardBody>
                     <CardFooter>
                     <Button colorScheme='#4681f4'
@@ -88,6 +89,18 @@ export default function ViewAndLoad({userdatadb}:any){
                         }}
                         _focus={{
                         bg: 'blue.500',
+                        }}
+                        onClick={()=>{
+                            checkout(
+                                {
+                                    lineItems: [
+                                      {
+                                        price: "price_1MfhFYSEwtNH34dAD4rgLDAC",
+                                        quantity: 1
+                                      }
+                                    ]
+                                  }
+                            )
                         }}
                     >
                         Load

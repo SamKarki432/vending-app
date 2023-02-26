@@ -15,6 +15,7 @@ const DashboardPage=()=>{
   const [userdata, setUserdata] = useState<userInfo>({});
 
    const {user, loading, logOut}= useFirebaseAuth();
+   //console.log(process.env.NEXT_PUBLIC_API_KEY)
    
    if(loading){
     return "loading please wait"
@@ -32,10 +33,8 @@ const DashboardPage=()=>{
       <Stack marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'}>
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
-          <ViewAndLoad userdatadb={userdata}/>
-          <br/>    
+          <ViewAndLoad userdatadb={userdata}/>    
           <BarChart/>
-          <br/>
           <TransactionHistory userinfo={userdata}/>
           
       </Stack>
