@@ -33,9 +33,9 @@ const DashboardPage=()=>{
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
           <ViewAndLoad userdatadb={userdata}/>
-          <br/>    
+          {/* <br/>     */}
           <BarChart/>
-          <br/>
+          {/* <br/> */}
           <TransactionHistory userinfo={userdata}/>
           
       </Stack>
