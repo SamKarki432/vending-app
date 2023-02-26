@@ -66,7 +66,7 @@ import {
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'Linked-in'} href={'#'}>
+            <SocialButton label={'Linked-in'} href={'https://www.linkedin.com/in/samrakshan-karki-900409256/'}>
               <FaLinkedin />
             </SocialButton>
             <SocialButton label={'Github'} href={'#'}>

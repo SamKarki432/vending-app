@@ -15,7 +15,7 @@ export default function TransactionHistory({userinfo}:any){
         <>
         <Center py={6}>
           <Stack
-            w={{ base: '90%', sm: '100%', md: '90%', lg: '80%' }}
+            w={{ base: '90%', sm: '100%', md: '90%', lg: '70%' }}
            //height={{ base: '400px', sm: '300px', md: '20rem' }}
             height="auto"
             direction={{ base: 'column', md: 'row' }}
@@ -55,13 +55,13 @@ export default function TransactionHistory({userinfo}:any){
                 </Flex>
                 {userinfo && userinfo.transactions ? (
                             userinfo.transactions.map((transaction:Transaction) => (
-                                <Flex  align="center"  p="3" rounded="md">
-                                    <Icon as={FaArrowDown} mr="2" color="red" />
+                                <Flex key={transaction.transaction_id} align="center"  p="3" rounded="md">
+                                    <Icon as={FaArrowDown} mr="2" color="red" boxSize={6}/>
                                     <Box flex="1">
                                         <Text fontSize="lg" fontWeight="semibold">{transaction.items_purchased.join(",")}</Text>
                                         <Text fontSize="sm">{(transaction.transaction_date).toLocaleString()}</Text>
                                     </Box>
-                                    <Text fontSize="md" color="red.500" fontWeight="semibold">- Nrs. {transaction.price}</Text>
+                                    <Text fontSize="md" color="red.500" fontWeight="semibold">&#8360; {transaction.price}</Text>
                                 </Flex>
                                
                             ))

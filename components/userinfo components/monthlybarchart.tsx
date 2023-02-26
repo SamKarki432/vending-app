@@ -49,7 +49,7 @@ export default function BarChart(){
   return (
     <Center py={6}>
           <Stack
-            w={{ base: '90%', sm: '80%', md: '80%', lg: '60%' }}
+            w={{ base: '90%', sm: '80%', md: '90%', lg: '70%' }}
             height={{ base: '400px', sm: '300px', md: '20rem' }}
             direction={{ base: 'column', md: 'row' }}
             borderRadius="lg"
