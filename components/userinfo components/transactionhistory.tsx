@@ -20,10 +20,10 @@ export default function TransactionHistory({userinfo}:any){
             height="auto"
             direction={{ base: 'column', md: 'row' }}
             borderRadius="lg"
-            boxShadow={'2xl'}
+            boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
             sx={{ borderRadius: "10%" }}
             padding={4}
-            //bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('white', 'gray.900')}
           >
             <Flex direction="column" w="100%">
                 <Flex

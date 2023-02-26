@@ -28,6 +28,7 @@ const DashboardPage=()=>{
   return (
     <>
       <NavBar/>
+      {/* <Box bg={useColorModeValue('gray.200', 'gray.800')}> */}
       <Stack marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'}>
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
@@ -38,7 +39,9 @@ const DashboardPage=()=>{
           <TransactionHistory userinfo={userdata}/>
           
       </Stack>
-    <VendingFooter/>
+      <VendingFooter/>
+      {/* </Box> */}
+    
      </>
   )
 }

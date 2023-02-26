@@ -23,9 +23,9 @@ export default function ViewAndLoad({userdatadb}:any){
                     borderRadius="lg"
                     // borderWidth="2px"
                     // borderColor={'gray.300'}
-                    boxShadow={'2xl'}
+                    boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
                     maxW='md'
-                    sx={{ borderRadius: "15%" }}
+                    sx={{ borderRadius: "5%" }}
                     w='full'
                     minH='200px' // set the minimum height for the card
                 >
@@ -62,8 +62,8 @@ export default function ViewAndLoad({userdatadb}:any){
                     borderRadius="lg"
                     //  borderWidth="2px"
                     //  borderColor={'gray.300'}
-                    boxShadow={'2xl'}
-                    sx={{ borderRadius: "15%" }}
+                    boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
+                    sx={{ borderRadius: "5%" }}
                     w='full'
                     minH='200px' // set the minimum height for the card
                 >

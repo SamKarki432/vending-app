@@ -41,7 +41,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('green.400', 'gray.900')} px={4} as="header">
+      <Box bg={useColorModeValue('blue.400', 'gray.900')} px={4} as="header">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
           <Box>
             <Heading >Dashboard</Heading>

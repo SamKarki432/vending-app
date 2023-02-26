@@ -7,7 +7,9 @@ function UserLogin({background}:any){
             <Flex height="80vh" alignItems="center" justifyContent="center">
                 <Flex direction="column" background={background} p={12} rounded={8}
                  borderRadius="lg"
-                 boxShadow={'xl'}
+                 //boxShadow={'dark-lg'}
+                 boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
+                 borderWidth="1px"
                 >
                     <Heading mb={6} textAlign="center">SIGN-IN</Heading>
                     <FormControl mb={3}>
