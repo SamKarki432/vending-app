@@ -30,10 +30,10 @@ const DashboardPage=()=>{
     <>
       <NavBar/>
       {/* <Box bg={useColorModeValue('gray.200', 'gray.800')}> */}
-      <Stack marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'}>
+       <Stack > {/* marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'} */}
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
-          <ViewAndLoad userdatadb={userdata}/>    
+          <ViewAndLoad userinfo={user} userdatadb={userdata}/>    
           <BarChart/>
           <TransactionHistory userinfo={userdata}/>
           

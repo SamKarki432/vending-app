@@ -47,9 +47,10 @@ import { updateUser } from '../../firebase/dboperations';
     return (
       <Center py={6}>
         <Stack
-    
+          maxW="100%"
           borderRadius="lg"
-          w={{ sm: '100%', md: '90%', lg:'70%' }}
+         // w={{ sm: '100%', md: '90%', lg:'70%' }}
+         w={{ base: '90%', sm: '80%', md: '90%', lg: '70%' }}
           //height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
@@ -57,7 +58,8 @@ import { updateUser } from '../../firebase/dboperations';
          bg={useColorModeValue('white', 'gray.900')}
           // boxShadow={'2xl'}
           boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
-          padding={4}>
+          padding={4}
+          >
 
           <Flex flex={1} 
           justifyContent="center"
@@ -66,7 +68,7 @@ import { updateUser } from '../../firebase/dboperations';
               borderRadius='full'
               borderWidth="10px"
               alt='image'
-              boxSize={{ sm: '500px', md: '200px', lg: '225px' }} // decrease size in lg screens
+              boxSize={{ sm: '500px', md: '200px', lg: '225px' }} 
               src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
             />
 
