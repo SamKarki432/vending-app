@@ -16,7 +16,7 @@ import { useRouter } from 'next/router'
 
 export default function ViewAndLoad({userinfo,userdatadb}:any){
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [newbal, setNewbal] = useState<number>(userdatadb.balance);
+    const [newbal, setNewbal] = useState<number>(userdatadb?.balance);
     const [updatebalance, setUpdatebalance]=useState(false);
    //console.log(typeof userdatadb.balance)
    
@@ -45,7 +45,7 @@ export default function ViewAndLoad({userinfo,userdatadb}:any){
         const form = event.currentTarget;
         event.preventDefault();
         const balance_load = form.elements.namedItem('load balance') as HTMLInputElement;
-        const new_balance = parseInt(userdatadb.balance) + parseInt(balance_load.value);
+        const new_balance = parseInt(userdatadb?.balance) + parseInt(balance_load.value);
         // setNewbal(new_balance);
         // console.log(String(new_balance))
         // console.log(newbal)

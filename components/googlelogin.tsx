@@ -18,7 +18,15 @@ function GoogleLogin({background}:any){
                    
                   if (!data || getAdditionalUserInfo(result)?.isNewUser) {
                     console.log('new user')
-                    writeUserData(user?.uid,)
+                    writeUserData(user?.uid,{
+                        userid: user?.uid,
+                        user_name : user?.displayName,
+                        user_email : user?.email,
+                        account_created_date : (user?.metadata.creationTime)?.toLocaleString(),
+                        phoneNumber:"not provided",
+                        balance: 0,
+                        transactions:[]
+                    })
                   }
                   else {
                    console.log('old user')
