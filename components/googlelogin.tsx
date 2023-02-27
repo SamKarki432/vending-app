@@ -1,9 +1,9 @@
 import { Button, Flex, Heading } from "@chakra-ui/react";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, getAdditionalUserInfo,} from "firebase/auth";
 import {auth as GAuth} from "../firebase/firebaseconfig"
 import GoogleButton from 'react-google-button'
 import { useRouter } from "next/router";
-
+import {readData} from "../firebase/dboperations"
 
 function GoogleLogin({background}:any){
     const auth= GAuth;
@@ -13,9 +13,21 @@ function GoogleLogin({background}:any){
         signInWithPopup(auth, provider)
         .then((result) => {
             const user = result.user;
-            router.push("/")
+            user?.getIdTokenResult(true).then(function (idTokenResult) {
+                readData("users/"+ user.uid).then(data => {
+                   
+                  if (!data || getAdditionalUserInfo(result)?.isNewUser) {
+                    console.log('new user')
+                  }
+                  else {
+                   console.log('old user')
+                  }
+                }).catch(error => console.log(error))
+                
+                router.push("/")
+              });
          }).catch((error) => {
-            console.log("login vayena")
+            //console.log("login vayena")
         });
     }
 
