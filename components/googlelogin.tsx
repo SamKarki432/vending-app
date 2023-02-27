@@ -3,7 +3,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, getAdditionalUserInfo,} f
 import {auth as GAuth} from "../firebase/firebaseconfig"
 import GoogleButton from 'react-google-button'
 import { useRouter } from "next/router";
-import {readData} from "../firebase/dboperations"
+import {readData,writeUserData} from "../firebase/dboperations"
 
 function GoogleLogin({background}:any){
     const auth= GAuth;
@@ -18,6 +18,7 @@ function GoogleLogin({background}:any){
                    
                   if (!data || getAdditionalUserInfo(result)?.isNewUser) {
                     console.log('new user')
+                    writeUserData(user?.uid,)
                   }
                   else {
                    console.log('old user')
