@@ -173,7 +173,7 @@ export default function ViewAndLoad({userinfo,userdatadb}:any){
                     <Modal isOpen={isOpen} onClose={onClose} size={'full'}>
                     <ModalOverlay />
                     <ModalContent>
-                      <ModalHeader>Profile</ModalHeader>
+                      <ModalHeader>LOAD BALANCE</ModalHeader>
                       <ModalCloseButton />
                       <ModalBody>
                       <form onSubmit={handleSubmit}>
