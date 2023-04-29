@@ -42,7 +42,7 @@ export default function BarChart({userdatadb}:any){
             '#18122B'
         ],
         // borderColor: "rgb(255, 99, 132)",
-        data: [200, 100, 200, 200,0, 0, 0,0,0,0,0,0],
+        data: [200, 100, 200, parseInt(userdatadb?.total_price),0, 0, 0,0,0,0,0,0],
       },
     ],
   };
