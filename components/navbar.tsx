@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode, useState } from 'react';
 import {
   Box,
@@ -41,53 +42,34 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('blue.400', 'gray.900')} px={4} as="header">
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} >
-          <Box>
-            <Heading >Dashboard</Heading>
-          </Box>
+            <Box
+              bg={useColorModeValue('gray.300', 'gray.900')}
+              px={4}
+              py={1}
+              as="header"
+              borderBottom="3px solid #e2e8f0"
+              textAlign="center" // add text alignment to center
+            >
+              <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+                <Box></Box>
+                
+                <Box>
+                  <Heading>Dashboard</Heading>
+                </Box>
 
-          <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7}>
-              <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+                <Flex alignItems={'center'}>
+                  <Stack direction={'row'} spacing={2}>
+                    <Button onClick={toggleColorMode}>
+                      {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                    </Button>
+                    <Button onClick={logOut} colorScheme={'red'}>
+                      Log Out
+                    </Button>
+                  </Stack>
+                </Flex>
+              </Flex>
+            </Box>
 
-              {/* <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={'full'}
-                  variant={'link'}
-                  cursor={'pointer'}
-                  minW={0}>
-                  <Avatar
-                    size={'sm'}
-                    src={user?.photoURL?String(user?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg' }
-                  />
-                </MenuButton>
-                <MenuList alignItems={'center'}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={'2xl'}
-                      src={user?.photoURL?String(user?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg' }
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>{user?.displayName}</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>Account Settings</MenuItem>
-                  <MenuItem onClick={logOut}>Logout</MenuItem>
-                </MenuList>
-              </Menu> */}
-              <Button onClick={logOut} colorScheme={'red'}>Log Out</Button>
-            </Stack>
-          </Flex>
-        </Flex>
-      </Box>
     </>
   );
 }

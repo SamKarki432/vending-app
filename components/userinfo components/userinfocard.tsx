@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     Badge,
     Button,
@@ -30,12 +31,6 @@ import { updateUser } from '../../firebase/dboperations';
       const phoneNum = form.elements.namedItem('phone_number') as HTMLInputElement;
       const address = form.elements.namedItem('Address') as HTMLInputElement;
       
-    // console.log({
-    //   user_name: Name.value,
-    //   phoneNumber: phoneNum.value,
-    //   address: address.value,
-    //  })
-
      updateUser(userinfo.uid, {
       user_name: Name.value,
       phoneNumber: phoneNum.value,
@@ -45,19 +40,17 @@ import { updateUser } from '../../firebase/dboperations';
   }
     
     return (
-      <Center py={6}>
+      <Center py={1}>
         <Stack
           maxW="100%"
           borderRadius="lg"
-         // w={{ sm: '100%', md: '90%', lg:'70%' }}
          w={{ base: '90%', sm: '80%', md: '90%', lg: '70%' }}
-          //height={{ sm: '500px', md: '20rem' }}
           direction={{ base: 'column', md: 'row' }}
           sx={{ borderRadius: "5%" }}
-          
+          border="2px solid #e2e8f0"
          bg={useColorModeValue('white', 'gray.900')}
-          // boxShadow={'2xl'}
-          boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
+          boxShadow={'xl'}
+          //boxShadow="rgb(26 32 44 / 24%) 0px 16px 32px 0px, rgb(26 32 44 / 12%) 0px 8px 16px 0px"
           padding={4}
           >
 
@@ -69,7 +62,8 @@ import { updateUser } from '../../firebase/dboperations';
               borderWidth="10px"
               alt='image'
               boxSize={{ sm: '500px', md: '200px', lg: '225px' }} 
-              src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
+             src={userinfo?.photoURL?String(userinfo?.photoURL) : 'https://avatars.dicebear.com/api/male/username.svg'}
+             //src={'https://api.dicebear.com/6.x/personas/svg?seed=Simba&hair=short01'}
             />
 
           </Flex>
@@ -82,10 +76,10 @@ import { updateUser } from '../../firebase/dboperations';
             pt={2}
             >
             <Heading fontSize={'2xl'} fontFamily={'body'}>
-              {userinfo?.displayName}
+            {userinfo?.displayName}
             </Heading>
             <Text fontWeight={600} color={'gray.500'} size="sm" mb={4}>
-              {userinfo?.email}
+            {userinfo?.email}
             </Text>
 
             <Text
@@ -98,7 +92,7 @@ import { updateUser } from '../../firebase/dboperations';
 
             <Text px={3}>
               
-              {userdatadb?.phoneNumber?userdatadb?.phoneNumber:"No Phone Number provided. Enter your phone number"}
+            {userdatadb?.phoneNumber?userdatadb?.phoneNumber:"No Phone Number provided. Enter your phone number"}
             </Text>
   
             <Stack

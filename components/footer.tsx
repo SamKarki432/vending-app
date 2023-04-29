@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     Box,
     chakra,
@@ -6,6 +7,7 @@ import {
     Text,
     useColorModeValue,
     VisuallyHidden,
+    Button,
   } from '@chakra-ui/react';
   import { FaTwitter, FaYoutube,FaGithub,FaLinkedin } from 'react-icons/fa';
   import { ReactNode } from 'react';
@@ -44,7 +46,7 @@ import {
   export default function VendingFooter() {
     return (
       <Box
-        bg={useColorModeValue('blue.100', 'gray.900')}
+        bg={'gray.300'}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
           as={Stack}
@@ -55,24 +57,41 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
         <Stack direction={'column'}>
-          <Text>© 2023 Vending Machine Major Project</Text>
+          <Text color={'black'}>2023 Vending Machine Major Project</Text>
           <Text>
-            <Text as={'i'}> Created by </Text> <br/>
-            Samrakshan Karki<br/>
-            Rajnesh Shrestha<br/>
+            <Text as={'i'} color={'black'}> Created by </Text>
+            <Text color={'black'}> Samrakshan Karki 75021</Text>
+            <Text color={'black'}> Rajnesh Shrestha 75019</Text> 
           </Text>
         </Stack>
-          <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
-            </SocialButton>
-            <SocialButton label={'Linked-in'} href={'https://www.linkedin.com/in/samrakshan-karki-900409256/'}>
-              <FaLinkedin />
-            </SocialButton>
-            <SocialButton label={'Github'} href={'#'}>
-              <FaGithub />
-            </SocialButton>
+          <Stack direction={{ base: 'row', md: 'column' }} spacing={2}>
+            <Button
+                colorScheme="gray"
+                bg="#fff"
+                _hover={{ bg: 'blue.300' }}
+                leftIcon={<FaTwitter />}
+              >
+                Twitter
+          </Button>
+            
+            <Button
+                colorScheme="gray"
+                bg="#fff"
+                _hover={{ bg: 'blue.400' }}
+                leftIcon={<FaLinkedin />}
+              >
+                LinkedIn
+          </Button>
+            <Button
+                colorScheme="gray"
+                bg="#fff"
+                _hover={{ bg: 'gray.400' }}
+                leftIcon={<FaGithub />}
+              >
+                Github
+          </Button>
           </Stack>
+          
         </Container>
       </Box>
     );

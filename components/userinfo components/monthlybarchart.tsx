@@ -20,7 +20,7 @@ const styles: { [key: string]: CSSProperties } = {
     },
   };
 
-export default function BarChart(){
+export default function BarChart({userdatadb}:any){
   const labels = ["January", "February", "March", "April", "May", "June","July","August","September","October","November","December"];
   const data = {
     labels: labels,
@@ -42,7 +42,7 @@ export default function BarChart(){
             '#18122B'
         ],
         // borderColor: "rgb(255, 99, 132)",
-        data: [200, 100, 50, 100, 200, 300, 450,300,120,600,200,300],
+        data: [200, 100, 200, 200,0, 0, 0,0,0,0,0,0],
       },
     ],
   };
@@ -67,7 +67,7 @@ export default function BarChart(){
                         display: true,
                         text: "Monthly transactions",
                         font: {
-                          size: 27 // set the font size of the title to 24
+                          size: 30 
                         }
                       },
                       legend: {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Stack, useColorModeValue} from "@chakra-ui/react";
 import {  useState } from "react";
 import { readData} from "../firebase/dboperations";
@@ -29,18 +30,16 @@ const DashboardPage=()=>{
   return (
     <>
       <NavBar/>
-      {/* <Box bg={useColorModeValue('gray.200', 'gray.800')}> */}
        <Stack > {/* marginLeft={'2rem'} marginRight={'2rem'} marginBottom={'2rem'} */}
         
           <UserInfoCard userinfo={user} userdatadb={userdata}/>
           <ViewAndLoad userinfo={user} userdatadb={userdata}/>    
-          <BarChart/>
-          <TransactionHistory userinfo={userdata}/>
+          
+          <TransactionHistory userid={user} userinfo={userdata}/>
+          <BarChart userdatadb={userdata}/>
           
       </Stack>
       <VendingFooter/>
-      {/* </Box> */}
-    
      </>
   )
 }
